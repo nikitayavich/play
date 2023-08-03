@@ -1,0 +1,20 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitayavich/play.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitayavich/play/issues"
+  },
+  "homepage": "https://github.com/nikitayavich/play#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  }
+}
