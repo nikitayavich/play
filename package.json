@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/nikitayavich/play#readme",
   "devDependencies": {
-    "@playwright/test": "^1.36.2"
+    "@playwright/test": "^1.36.2",
+    "dd-trace": "^4.11.0"
   }
 }
