@@ -13,14 +13,14 @@ pipeline {
             stage('chromium') {
                steps {
                   catchError(stageResult: 'FAILURE') {
-                     bat  "npx playwright test --project=chromium"
+                     bat  "NODE_OPTIONS='-r dd-trace/ci/init' DD_ENV=ci DD_SERVICE=my-javascript-app npx playwright test --project=chromium"
                   }
                }
             }
             stage('firefox') {
                steps {
                   catchError(stageResult: 'FAILURE') {
-                     bat  "npx playwright test --project=firefox"
+                     bat  "NODE_OPTIONS='-r dd-trace/ci/init' DD_ENV=ci DD_SERVICE=my-javascript-app npx playwright test --project=firefox"
                   }
                }
             }
