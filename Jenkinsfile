@@ -1,5 +1,6 @@
 pipeline {
    agent any
+
    stages {
       stage('Installation') {
          steps {
@@ -13,14 +14,14 @@ pipeline {
             stage('chromium') {
                steps {
                   catchError(stageResult: 'FAILURE') {
-                     bat  "NODE_OPTIONS='-r dd-trace/ci/init' DD_ENV=ci DD_SERVICE=my-javascript-app npx playwright test --project=chromium"
+                     bat  "npx playwright test --project=chromium"
                   }
                }
             }
             stage('firefox') {
                steps {
                   catchError(stageResult: 'FAILURE') {
-                     bat  "NODE_OPTIONS='-r dd-trace/ci/init' DD_ENV=ci DD_SERVICE=my-javascript-app npx playwright test --project=firefox"
+                     bat  "npx playwright test --project=firefox"
                   }
                }
             }
